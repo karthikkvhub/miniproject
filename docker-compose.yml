@@ -1,0 +1,18 @@
+
+
+
+
+version: "3"
+services:
+ springboot-app:
+ #container_name: springbootaws-app
+  image: springboot-app-dockercomposee
+  restart: always
+  build: .
+  ports:
+    - 8000:9090
+  environment:
+    MYSQL_HOST: manidb2.cbvgdaawkqbe.us-east-1.rds.amazonaws.com
+    MYSQL_USER: root
+    MYSQL_PASSWORD: password
+    MYSQL_PORT: 3306
